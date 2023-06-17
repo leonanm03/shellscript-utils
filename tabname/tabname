@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+  echo "Por favor, forneça o novo nome da aba do terminal como argumento."
+  exit 1
+fi
+
+new_name="$1"
+
+echo -ne "\033]0;$new_name\007"
+
